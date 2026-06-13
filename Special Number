@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Wtn {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        int n = in.nextInt();
+
+        int d1 = n / 100;
+        int d2 = (n / 10) % 10;
+        int d3 = n % 10;
+
+        int[] fact = {1, 1, 2, 6, 24, 120, 720, 5040, 40320, 362880};
+
+        int sum = fact[d1] + fact[d2] + fact[d3];
+
+        System.out.println(sum == n);
+    }
+}
